@@ -42,8 +42,6 @@ class NotificationServiceTest {
 
     @Test
     void testNotSendNotificationWithNullableMessage(){
-        Mockito.when(notificationRepository.send(Mockito.any())).thenReturn(false);
-
         boolean mockResponse = notificationService.sendNotification(mockEmptyMessage);
 
         Assertions.assertFalse(mockResponse);
