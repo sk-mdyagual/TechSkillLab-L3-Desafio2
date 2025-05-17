@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
+import org.mockito.MockitoAnnotations;
 
 class NotificationServiceTest {
     @Mock
@@ -21,6 +22,7 @@ class NotificationServiceTest {
 
     @BeforeEach
     void setUp() {
+        MockitoAnnotations.openMocks(this);
         this.messageValido = "Hola, esto es una notificación";
         this.messageNulo = null;
         this.messageVacio = "";
